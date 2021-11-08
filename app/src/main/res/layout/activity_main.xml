@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Controller.MainActivity">
+
+    <ImageView
+        android:id="@+id/main_profile"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/ic_baseline_person_pin_24"
+        android:onClick="nextProfilePage"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="name_shared"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="364dp"
+        android:layout_marginTop="-80dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/left_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:text="Arsenal"
+            android:textAlignment="center"
+            android:textFontWeight="900"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:text="0 - 0"
+            android:textAlignment="center"
+            android:textFontWeight="900" />
+
+        <TextView
+            android:id="@+id/right_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:text="MAN UN"
+            android:textAlignment="center"
+            android:textFontWeight="900"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-80dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tokens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:text="Tokens = "
+            android:textFontWeight="900"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="740dp"
+        android:layout_gravity="bottom"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="150dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/left_team_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:layout_weight="1"
+                    android:onClick="left_team_action"
+                    android:text="Left Team" />
+
+                <Button
+                    android:id="@+id/right_team_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="right_team_action"
+                    android:text="Right Team" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:onClick="nextRound"
+                android:text="Next" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_friends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="80dp"
+                    android:layout_weight="1"
+                    android:onClick="nextFriends"
+                    android:text="Players" />
+
+                <Button
+                    android:id="@+id/btn_trophies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Trophies"
+                    android:onClick="nextTrophies"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
