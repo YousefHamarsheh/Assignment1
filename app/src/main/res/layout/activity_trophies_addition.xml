@@ -7,6 +7,17 @@
     tools:context=".Controller.TrophiesAddition"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/trohpies_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:text="Trophies"
+        android:textFontWeight="900"
+        android:textSize="34sp" />
+
     <ListView
         android:id="@+id/trophies_list"
         android:layout_width="wrap_content"
