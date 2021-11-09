@@ -71,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences(variables.getSharedLoginPref(), MODE_PRIVATE);
         String shared_name = sharedPreferences.getString(variables.getLoginUsername(), "");
         name.setText(shared_name);
+
+        loadTokens();
     }
 
     //Left Button action
@@ -180,6 +182,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    public void loadTokens(){
+
+        SharedPreferences sharedPreferences2 = getApplicationContext().getSharedPreferences(variables.getSharedTokensPref(),MODE_PRIVATE);
+        int tokens_shared = 0;
+        try {
+            tokens_shared = Integer.parseInt(sharedPreferences2.getString(variables.getSharedTokens(), ""));
+        }catch (Exception e){
+            tokens_shared = 0;
+        }
+        tokens = tokens_shared;
+    }
 
 
     public void nextFriends(View view) {

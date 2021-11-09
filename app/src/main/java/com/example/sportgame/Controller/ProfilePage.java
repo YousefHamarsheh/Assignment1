@@ -27,7 +27,7 @@ public class ProfilePage extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         name_profile = findViewById(R.id.name_profile);
-        email_profile = findViewById(R.id.email_profile);
+        email_profile = findViewById(R.id.gender_profile);
         edit_email = findViewById(R.id.edit_email);
         edit_name = findViewById(R.id.edit_name);
         profilePage_login = findViewById(R.id.profilepage_login);

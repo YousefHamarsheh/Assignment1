@@ -54,13 +54,13 @@
         android:layout_marginStart="26dp"
         android:layout_marginBottom="38dp"
         android:text="Edit Name"
-        app:layout_constraintBottom_toTopOf="@+id/email_profile"
+        app:layout_constraintBottom_toTopOf="@+id/gender_profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_profile"
         android:onClick="nextNamePref"/>
 
     <TextView
-        android:id="@+id/email_profile"
+        android:id="@+id/gender_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
@@ -82,7 +82,7 @@
         android:onClick="nextEmailPref"
         android:text="Edit Gender"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_profile" />
+        app:layout_constraintTop_toBottomOf="@+id/gender_profile" />
 
     <Button
         android:id="@+id/profilepage_login"
