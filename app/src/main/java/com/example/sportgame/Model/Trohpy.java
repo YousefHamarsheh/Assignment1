@@ -1,5 +1,10 @@
 package com.example.sportgame.Model;
 
+/*
+ *
+ * POJO "Plain Old Java Object"
+ *
+ * */
 public class Trohpy {
     private String name;
     private int tokens;

@@ -1,5 +1,10 @@
 package com.example.sportgame.Model;
 
+/*
+*
+* POJO "Plain Old Java Object"
+*
+* */
 public class Friend {
     String name;
     String football_team;

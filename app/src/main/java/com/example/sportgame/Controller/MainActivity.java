@@ -80,7 +80,9 @@ public class MainActivity extends AppCompatActivity {
         if (next.getVisibility() == View.GONE){
 
             /*
-            * Use of Thread is here*/
+            * Use of Thread is here
+            *
+            * */
             CalculateThread calculateThread = new CalculateThread();
             calculateThread.start();
             String ans = calculateThread.getLeft_team_score() + "-" + calculateThread.getRight_team_score();
@@ -116,7 +118,10 @@ public class MainActivity extends AppCompatActivity {
     public void right_team_action(View view) {
         if (next.getVisibility() == View.GONE){
             /*
-             * Use of Thread is here*/
+             * Use of Thread is here
+             *
+             *
+             * */
             CalculateThread calculateThread = new CalculateThread();
             calculateThread.start();
             String ans = calculateThread.getLeft_team_score() + "-" + calculateThread.getRight_team_score();
@@ -145,19 +150,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //Calculating the score for each team
-//    public String calculateScore(){
-//        int minScore = 0;
-//        int maxScore = 15;
-//        int left_team_score = 0;
-//        int right_team_score = 0;
-//
-//        left_team_score = new Random().nextInt(maxScore - minScore + 1) + minScore;
-//        right_team_score = new Random().nextInt(maxScore - minScore + 1) + minScore;
-//
-//        return left_team_score + "-" + right_team_score;
-//
-//    }
 
     public void nextRound(View view) {
         left_team.setText(arrLalgia[new Random().nextInt(arrLalgia.length - (0 + 1)) + 0]);
@@ -173,6 +165,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void nextTrophies(View view) {
+        /*
+        * Use of Shared Preferences
+        *
+        *
+        * */
         SharedPreferences sharedPreferences = getSharedPreferences(variables.getSharedTokensPref(),MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(variables.getSharedTokens(),String.valueOf(tokens));

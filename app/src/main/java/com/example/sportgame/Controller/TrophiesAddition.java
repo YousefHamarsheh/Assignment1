@@ -52,7 +52,11 @@ public class TrophiesAddition extends AppCompatActivity {
         }
 
 
-
+        /*
+        *
+        * Dynamic List vies that uses the data stored in the shared preferences
+        *
+        * */
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,arrTrophy);
         trophies_list.setAdapter(arrayAdapter);
     }

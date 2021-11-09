@@ -72,6 +72,11 @@ public class Friends extends AppCompatActivity {
         friends_name.setText(team);
 
 
+        /*
+        *
+        * Dynamic Spinner, that uses data stored in the shared preferences
+        *
+        * */
         friends_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                 String name = "";
@@ -101,6 +106,15 @@ public class Friends extends AppCompatActivity {
 
 
     public void load(View view) {
+
+        /*
+        *
+        *
+        * Use of Gson object with shared preferences
+        *
+        *
+        * */
+
         Toast.makeText(this,"Information Upload",Toast.LENGTH_LONG).show();
         SharedPreferences sharedPreferences = getSharedPreferences(variables.getSharedSpinnerPref(),MODE_PRIVATE);
         Gson gson = new Gson();
