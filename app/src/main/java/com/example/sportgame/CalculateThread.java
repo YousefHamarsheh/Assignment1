@@ -9,6 +9,8 @@ public class CalculateThread extends Thread{
     private static int right_team_score = 0;
 
 
+    
+
     @Override
     public void run() {
         left_team_score = new Random().nextInt(maxScore - minScore + 1) + minScore;
